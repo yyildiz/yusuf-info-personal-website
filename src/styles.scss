@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'styles/colors';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;600;700&display=swap');
+
+html, body { height: 100%; }
+body {
+  background: $background;
+  margin: 0;
+  color: $foreground;
+  font-family: 'Roboto Mono', monospace;
+  * {
+    user-select: none; /* Prevent text selection */
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

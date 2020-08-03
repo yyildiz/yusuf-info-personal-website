@@ -1,0 +1,61 @@
+@import "src/styles/colors";
+
+.toolbar {
+  font-size: 12px;
+  font-family: "Roboto";
+  width: 100%;
+  background: $selection-active-bg;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+  .container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    &.center {
+      justify-content: center;;
+    }
+    &.right {
+      display: flex;
+      justify-content: flex-end;
+      .material-icons {
+        font-size: 17px;
+        height: 100%;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:nth-child(1) {
+          padding-bottom: 7px;
+          box-sizing: border-box;
+        }
+        &:nth-child(2) {
+          font-size: 13px;
+        }
+
+        &:hover {
+          background: grey;
+          &:nth-child(3) {
+            background: red;
+          }
+        }
+      }
+    }
+  }
+  .item {
+    height: 30px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    color: darken($menu-fg, 5%);
+    &:hover {
+      background: lighten($selection-active-bg, 10%);
+    }
+  }
+  img {
+    height: 16px;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+}

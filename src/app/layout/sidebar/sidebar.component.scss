@@ -1,0 +1,62 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+
+.sidebar {
+  height: calc(100vh - 30px);
+  width: 300px;
+  background: $menu-bg;
+  color: $menu-fg;
+  font-size: 11px;
+  box-shadow: 2px 2px 2px $menu-bg;
+  > .title {
+    text-transform: uppercase;
+    font-weight: 300;
+    width: 100%;
+    padding: 5px 15px;
+    box-sizing: border-box;
+  }
+  .material-icons {
+    font-size: 18px;
+  }
+  .tree {
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba($menu-fg, 0.2);
+    max-height: 212px;
+    overflow-y: scroll;
+    &:last-child {
+      border-bottom: none;
+    }
+    .title {
+      cursor: pointer;
+      padding: 5px 15px;
+      display: flex;
+    }
+    ul {
+      text-transform: initial;
+      li {
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        padding-left: 20px;
+        span {
+          display: inline-flex;
+          height: 25px;
+          align-items: center;
+          font-weight: 300;
+
+        }
+        div {
+          &:hover {
+            background: $selection-bg;
+          }
+        }
+        span > img {
+          height: 16px;
+          display: inline-flex;
+          align-items: center;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
