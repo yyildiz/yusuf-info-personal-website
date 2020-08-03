@@ -10,9 +10,19 @@ span {
 div {
   width: 100%;
   padding-left: 20px;
+  box-sizing: border-box;
   display: flex;
   &:hover {
     background: $selection-bg;
+  }
+  // there should be a better way of dealing with nested div padding...
+  // just adding padding-left of 20px to list elements messes up on hover effect
+  // hacked this way for now...
+  & + ul div {
+    padding-left: 40px;
+    & + ul div {
+      padding-left: 60px;
+    }
   }
 }
 span > img {
@@ -24,8 +34,4 @@ span > img {
 
 .material-icons {
   font-size: 15px;
-}
-
-ul {
-  padding-left: 25px;
 }
