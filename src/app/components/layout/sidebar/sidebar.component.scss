@@ -1,9 +1,13 @@
 @import "src/styles/colors";
 @import "src/styles/sizes";
 
+app-sidebar-item {
+  width: 100%;
+}
+
 .sidebar {
   height: calc(100vh - 30px);
-  width: 300px;
+  width: $sidebar-width;
   background: $menu-bg;
   color: $menu-fg;
   font-size: 11px;
@@ -21,7 +25,7 @@
   .tree {
     text-transform: uppercase;
     border-bottom: 1px solid rgba($menu-fg, 0.2);
-    max-height: 212px;
+    max-height: 350px;
     overflow-y: scroll;
     &:last-child {
       border-bottom: none;
@@ -37,25 +41,6 @@
         cursor: pointer;
         width: 100%;
         display: flex;
-        padding-left: 20px;
-        span {
-          display: inline-flex;
-          height: 25px;
-          align-items: center;
-          font-weight: 300;
-
-        }
-        div {
-          &:hover {
-            background: $selection-bg;
-          }
-        }
-        span > img {
-          height: 16px;
-          display: inline-flex;
-          align-items: center;
-          margin-right: 5px;
-        }
       }
     }
   }

@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <div class="title">Explorer</div>
+  <div class="tree">
+    <div class="title"><span class="material-icons">keyboard_arrow_right</span>Open Editors</div>
+  </div>
+  <div class="tree">
+    <div class="title"><span class="material-icons">keyboard_arrow_down</span>yusuf-info</div>
+    <ul>
+      <li *ngFor="let file of (files$ | async)"><app-sidebar-item [iconSrc]="file.iconSrc" [matIcon]="file.matIcon" [text]="file.text" [children]="file?.children"></app-sidebar-item></li>
+    </ul>
+  </div>
+  <div class="tree">
+    <div class="title"><span class="material-icons">keyboard_arrow_right</span>Timeline</div>
+  </div>
+  <div class="tree">
+    <div class="title"><span class="material-icons">keyboard_arrow_right</span>Npm Scripts</div>
+  </div>
+</div>
