@@ -6,7 +6,7 @@
   <div class="tree">
     <div class="title"><span class="material-icons">keyboard_arrow_down</span>yusuf-info</div>
     <ul>
-      <li *ngFor="let file of (files$ | async)"><app-sidebar-item [iconSrc]="file.iconSrc" [matIcon]="file.matIcon" [text]="file.text" [children]="file?.children"></app-sidebar-item></li>
+      <li *ngFor="let file of (files$ | async)"><app-sidebar-item [link]="file.link" [iconSrc]="file.iconSrc" [matIcon]="file.matIcon" [text]="file.text" [children]="file?.children"></app-sidebar-item></li>
     </ul>
   </div>
   <div class="tree">

@@ -1,0 +1,49 @@
+@import 'src/styles/sizes';
+@import 'src/styles/colors';
+.file {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  border-right: 1px solid $background;
+  background: darken($selection-active-bg, 8%);
+  &.active .title {
+    color: $menu-fg;
+  }
+  &:focus {
+    outline: none;
+  }
+  .title {
+    font-family: "Roboto";
+    padding: 10px 30px;
+    position: relative;
+    color: $active-bg;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    > span {
+      width: 16px;
+      padding-right: 5px;
+      margin-bottom: -6px;
+    }
+    &:hover {
+      &:before {
+        font-family: "Material Icons";
+        content: "close";
+        font-size: 15px;
+        width: 35px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        color: lighten($sidebar-title, 30%);
+      }
+    }
+  }
+  &.active {
+    background: $background;
+  }
+}

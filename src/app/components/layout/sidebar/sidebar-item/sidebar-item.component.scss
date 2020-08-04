@@ -12,6 +12,15 @@ div {
   padding-left: 20px;
   box-sizing: border-box;
   display: flex;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 47px;
+    background: rgba(white, 0.1);
+    height: 100%;
+    width: 1px;
+  }
   &:hover {
     background: $selection-bg;
   }
@@ -20,6 +29,16 @@ div {
   // hacked this way for now...
   & + ul div {
     padding-left: 40px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 47px;
+      background: rgba(white, 0.1);
+      height: 100%;
+      width: 1px;
+    }
     & + ul div {
       padding-left: 60px;
     }

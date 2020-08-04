@@ -13,6 +13,9 @@ import { SidebarComponent } from './components/layout/sidebar/sidebar.component'
 import { FilesComponent } from './components/layout/files/files.component';
 import { SidebarItemComponent } from './components/layout/sidebar/sidebar-item/sidebar-item.component';
 import { FileReducer, InitialState, initialState } from './store/reducer';
+import { LayoutComponent } from './components/layout/layout/layout.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FileComponent } from './components/layout/files/file/file.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { FileReducer, InitialState, initialState } from './store/reducer';
     ToolbarComponent,
     SidebarComponent,
     FilesComponent,
-    SidebarItemComponent
+    SidebarItemComponent,
+    LayoutComponent,
+    ContactComponent,
+    FileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,6 @@
+import { File } from 'src/app/interfaces/file.interface';
+import { Observable } from 'rxjs';
+import { select } from '@angular-redux/store';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
@@ -9,6 +12,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 export class FilesComponent implements OnInit {
 
   constructor() { }
+  @select('files') files$: Observable<Array<File>>;
 
   ngOnInit(): void {
   }

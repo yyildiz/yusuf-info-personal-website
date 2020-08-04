@@ -1,6 +1,5 @@
 import { Observable } from 'rxjs';
-import { InitialState } from './../../../store/reducer';
-import { NgRedux, select } from '@angular-redux/store';
+import { select } from '@angular-redux/store';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { File } from 'src/app/interfaces/file.interface';
 @Component({
@@ -11,11 +10,10 @@ import { File } from 'src/app/interfaces/file.interface';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor(private ngRedux: NgRedux<InitialState>) { }
+  constructor() { }
   @select('files') files$: Observable<Array<File>>;
 
   ngOnInit(): void {
-    this.files$.subscribe(p => console.log(p));
   }
 
 }

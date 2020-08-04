@@ -35,6 +35,8 @@ export const initialState = {
               matIcon: '',
               iconSrc: 'assets/file_type_html.svg',
               text: 'home.component.html',
+              link: 'home',
+              default: true,
             },
             {
               matIcon: '',
@@ -62,6 +64,8 @@ export const initialState = {
               matIcon: '',
               iconSrc: 'assets/file_type_html.svg',
               text: 'blog.component.html',
+              link: 'blog',
+              default: true,
             },
             {
               matIcon: '',
@@ -89,6 +93,8 @@ export const initialState = {
               matIcon: '',
               iconSrc: 'assets/file_type_html.svg',
               text: 'contact.component.html',
+              link: 'contact',
+              default: true,
             },
             {
               matIcon: '',

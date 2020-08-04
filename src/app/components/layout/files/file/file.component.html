@@ -1,0 +1,8 @@
+<ng-container *ngIf="default" >
+  <span class="file" [routerLink]="link" routerLinkActive="active">
+    <div class="title"><span><img [src]="iconSrc" alt=""></span>{{text}}</div>
+  </span>
+</ng-container>
+<ng-container *ngFor="let child of children">
+  <app-file [link]="child.link" [iconSrc]="child.iconSrc" [matIcon]="child.matIcon" [text]="child.text" [children]="child?.children" [default]="child.default"></app-file>
+</ng-container>

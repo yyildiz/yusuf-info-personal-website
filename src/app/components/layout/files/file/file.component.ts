@@ -1,20 +1,21 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-sidebar-item',
-  templateUrl: './sidebar-item.component.html',
-  styleUrls: ['./sidebar-item.component.scss'],
+  selector: 'app-file',
+  templateUrl: './file.component.html',
+  styleUrls: ['./file.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SidebarItemComponent implements OnInit {
+export class FileComponent implements OnInit {
 
+  constructor() { }
   @Input() iconSrc;
   @Input() matIcon;
   @Input() text;
-  @Input() children;
   @Input() link;
-  constructor() { }
-
+  @Input() children;
+  @Input() default;
   ngOnInit(): void {
   }
+
 }
