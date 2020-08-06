@@ -1,0 +1,18 @@
+@import '../styles/colors';
+
+.contstruction {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: $selection-active-bg;
+  padding: 5px 10px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: $constant;
+  font-size: .9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
