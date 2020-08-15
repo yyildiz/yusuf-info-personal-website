@@ -1,1 +1,6 @@
-<p>Currently Under Construction - Should be available in a week or so...</p>
+<div class="blog-posts">
+  <div *ngFor="let post of (posts$ | async)"  class='post'>
+    <span>{{post.title.rendered}}</span>
+    <div [innerHTML]='post.content.rendered'></div>
+  </div>
+</div>

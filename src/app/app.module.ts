@@ -1,6 +1,9 @@
+import { State } from './store/state';
+
+import { HttpClientModule } from '@angular/common/http';
+import { WpApiService } from './services/wp-api.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgReduxModule, NgRedux } from '@angular-redux/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +15,6 @@ import { ToolbarComponent } from './components/layout/toolbar/toolbar.component'
 import { SidebarComponent } from './components/layout/sidebar/sidebar.component';
 import { FilesComponent } from './components/layout/files/files.component';
 import { SidebarItemComponent } from './components/layout/sidebar/sidebar-item/sidebar-item.component';
-import { FileReducer, InitialState, initialState } from './store/reducer';
 import { LayoutComponent } from './components/layout/layout/layout.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FileComponent } from './components/layout/files/file/file.component';
@@ -35,13 +37,14 @@ import { FileComponent } from './components/layout/files/file/file.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgReduxModule
+    HttpClientModule
   ],
-  providers: [],
+  providers: [WpApiService, State],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
-  constructor(ngRedux: NgRedux<InitialState>) {
-    ngRedux.configureStore(FileReducer, initialState);
+
+  constructor() {
   }
 }

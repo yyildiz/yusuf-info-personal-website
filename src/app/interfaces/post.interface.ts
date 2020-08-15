@@ -1,8 +1,8 @@
 export interface Post {
-  title: {
-    rendered: string;
+  title?: {
+    rendered?: string;
   };
-  content: {
-    rendered: string;
+  content?: {
+    rendered?: string;
   };
 }

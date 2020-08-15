@@ -1,4 +1,7 @@
+import { WpApiService } from './../../../services/wp-api.service';
+import { Observable } from 'rxjs';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Post } from 'src/app/interfaces/post.interface';
 
 @Component({
   selector: 'app-layout',
@@ -6,11 +9,8 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./layout.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LayoutComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+export class LayoutComponent {
+  constructor() {
   }
 
 }

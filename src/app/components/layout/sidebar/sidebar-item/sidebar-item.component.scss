@@ -6,6 +6,9 @@ span {
   height: 15px;
   align-items: center;
   font-weight: 300;
+  .material-icons {
+    font-family: unset;
+  }
 }
 div {
   width: 100%;

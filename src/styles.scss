@@ -7,8 +7,8 @@ html, body { height: 100%; }
 body {
   background: $background;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
   color: $foreground;
-  font-family: 'Roboto Mono', monospace;
   * {
     user-select: none; /* Prevent text selection */
   }

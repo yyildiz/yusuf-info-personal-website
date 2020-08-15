@@ -1,7 +1,8 @@
-import { File } from 'src/app/interfaces/file.interface';
 import { Observable } from 'rxjs';
-import { select } from '@angular-redux/store';
+import { State } from './../../../store/state';
+import { initialState } from '../../../consts/file.state';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { File } from 'src/app/interfaces/file.interface';
 
 @Component({
   selector: 'app-files',
@@ -11,10 +12,11 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class FilesComponent implements OnInit {
 
-  constructor() { }
-  @select('files') files$: Observable<Array<File>>;
+  constructor(private state: State) { }
+  files$: Observable<File[]>;
 
   ngOnInit(): void {
+    this.files$ = this.state.getFiles();
   }
 
 }

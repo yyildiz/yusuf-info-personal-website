@@ -1,7 +1,6 @@
-import { Observable } from 'rxjs';
-import { select } from '@angular-redux/store';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { File } from 'src/app/interfaces/file.interface';
+import { initialState } from '../../../consts/file.state';
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -9,9 +8,8 @@ import { File } from 'src/app/interfaces/file.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SidebarComponent implements OnInit {
-
+  files = initialState;
   constructor() { }
-  @select('files') files$: Observable<Array<File>>;
 
   ngOnInit(): void {
   }

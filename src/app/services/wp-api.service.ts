@@ -1,3 +1,7 @@
+import { State } from './../store/state';
+import { Observable } from 'rxjs';
+import { shareReplay, map, mergeMap } from 'rxjs/operators';
+import { postsUrl } from './../consts/urls.const';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Post } from '../interfaces/post.interface';
@@ -6,11 +10,18 @@ import { Post } from '../interfaces/post.interface';
   providedIn: 'root'
 })
 export class WpApiService {
-
-  constructor(private http: HttpClient) {
+  private posts$: Observable<Post[]>;
+  constructor(private http: HttpClient, private state: State) {
   }
 
   getPosts() {
-    return this.http.get<Post[]>('http://yusuf.info/api/wp-json/wp/v2/posts');
+    if (!this.posts$) {
+      this.posts$ = this.call().pipe(shareReplay(1), mergeMap((posts) => this.state.updatePosts(posts)));
+    }
+    return this.posts$;
+  }
+
+  call() {
+    return this.http.get<Post[]>(postsUrl);
   }
 }
