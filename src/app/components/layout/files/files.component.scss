@@ -5,3 +5,18 @@
   background: $menu-bg;
   height: 35px;
 }
+@media only screen and (max-width: 850px) {
+  .files {
+    width: 100vw;
+    display: flex;
+    position: relative;
+    overflow-x: scroll;
+    width: 100%;
+    span > app-file {
+      display: inline-flex;
+      position: relative;
+      overflow-x: scroll;
+      width: 100%;
+    }
+  }
+}

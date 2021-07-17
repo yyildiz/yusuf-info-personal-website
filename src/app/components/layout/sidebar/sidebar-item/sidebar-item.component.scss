@@ -16,6 +16,14 @@ div {
   box-sizing: border-box;
   display: flex;
   position: relative;
+  &.interactable {
+    color: $badge;
+  }
+  &.interactable.active {
+    color: $constant;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+  }
   &:before {
     content: "";
     position: absolute;

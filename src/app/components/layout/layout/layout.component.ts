@@ -1,7 +1,4 @@
-import { WpApiService } from './../../../services/wp-api.service';
-import { Observable } from 'rxjs';
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { Post } from 'src/app/interfaces/post.interface';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-layout',
@@ -10,7 +7,14 @@ import { Post } from 'src/app/interfaces/post.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LayoutComponent {
+  isMinimized = false;
   constructor() {
+
+  }
+
+  minMax(isMin) {
+    console.log(isMin);
+    this.isMinimized = isMin;
   }
 
 }

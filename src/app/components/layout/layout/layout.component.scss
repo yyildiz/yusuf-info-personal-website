@@ -1,3 +1,47 @@
+@import 'src/styles/sizes';
 app-toolbar + div {
   display: flex;
+}
+app-terminal {
+  height: 250px;
+  overflow: hidden;
+}
+
+.code {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 850px) {
+  app-sidebar {
+    display: none;
+  }
+  app-file {
+    display: flex;
+    overflow-x: scroll;
+  }
+  app-files {
+    overflow: scroll;
+  }
+  app-terminal {
+    width: 100%;
+  }
+}
+
+::ng-deep .container.min {
+  app-terminal {
+    height: unset;
+  }
+  app-files app-home .content {
+    height: calc(90vh - 50px);
+  }
+  .blog-posts {
+    height: calc(90vh - 50px);
+  }
+  app-contact {
+    .container {
+      height: calc(90vh - 50px);
+    }
+  }
 }

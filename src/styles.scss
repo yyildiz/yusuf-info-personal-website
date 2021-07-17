@@ -9,12 +9,24 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   color: $foreground;
+  overflow: hidden;
   * {
     user-select: none; /* Prevent text selection */
   }
   ::-webkit-scrollbar {
     display: none;
   }
+
+  a {
+    text-decoration: underline;
+    color: white;
+  }
+}
+
+.post > div > p:first-child:first-letter {
+  font-size: 4.5em;
+  float: left;
+  margin-top: -.15em;
 }
 
 ul {

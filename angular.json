@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "yusuf-info"
+  "defaultProject": "yusuf-info",
+  "cli": {
+    "analytics": "037e525e-069f-40d6-9f94-07b955b78242"
+  }
 }
