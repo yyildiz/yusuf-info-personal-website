@@ -1,0 +1,20 @@
+<div  class="terminal-container">
+  <div class="terminal-menu">
+    <div class="tabs">
+      <li>Problems</li>
+      <li>Output</li>
+      <li>Debug Console</li>
+      <li>Terminal</li>
+    </div>
+    <div class="options">
+      <li class="version-selector" matTooltip="1: node">1: node</li>
+      <li><img src="assets/add.svg" alt=""></li>
+      <li><img src="assets/split-horizontal.svg" alt=""></li>
+      <li><img src="assets/trash.svg" alt=""></li>
+      <li (click)="toggleMinMax()" class="interactable" [ngClass]="isMinimized ? 'arrow-up' : 'arrow-down'"></li>
+      <li class="close"></li>
+    </div>
+  </div>
+  <ng-terminal [ngClass]="isMinimized ? 'hide' : 'show'" #term></ng-terminal>
+</div>
+

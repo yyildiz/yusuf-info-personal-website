@@ -1,9 +1,10 @@
 <div class="code">
   <app-toolbar></app-toolbar>
-  <div class="container">
+  <div [ngClass]="isMinimized ? 'min': 'max'" class="container">
     <app-sidebar></app-sidebar>
     <app-files>
       <router-outlet></router-outlet>
     </app-files>
+    <app-terminal (minEvent)="minMax($event)"></app-terminal>
   </div>
 </div>

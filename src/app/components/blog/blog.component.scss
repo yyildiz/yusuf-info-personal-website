@@ -1,0 +1,39 @@
+.blog-posts {
+  font-family: "Roboto Mono", monospace;
+  padding: 50px;
+  box-sizing: border-box;
+  height: calc(100vh - 300px);
+  overflow: scroll;
+  margin: 0 65px;
+  .post {
+    & > span {
+      font-size: 2.5em;
+      font-weight: bold;
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 715px) {
+  .blog-posts {
+    height: calc(100vh - 50px);
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 0 25px;
+    font-size: .8em;
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .blog-posts {
+    height: calc(100vh - 325px);
+  }
+}

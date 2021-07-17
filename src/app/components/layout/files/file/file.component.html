@@ -1,5 +1,5 @@
 <ng-container *ngIf="default" >
-  <span class="file" [routerLink]="link" routerLinkActive="active">
+  <span class="file" [routerLink]="link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true, isActive: true }">
     <div class="title"><span><img [src]="iconSrc" alt=""></span>{{text}}</div>
   </span>
 </ng-container>

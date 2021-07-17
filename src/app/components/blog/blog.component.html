@@ -1,6 +1,14 @@
+<!-- Opens all external links in a new tab / window -->
+<base target="_blank"/>
 <div class="blog-posts">
-  <div *ngFor="let post of (posts$ | async)"  class='post'>
-    <span>{{post.title.rendered}}</span>
-    <div [innerHTML]='post.content.rendered'></div>
-  </div>
+  <ng-container *ngIf="posts$ | async as posts; else loading" >
+    <div *ngFor="let post of posts" class='post'>
+      <span>{{post.title.rendered}}</span>
+      <div [innerHTML]='post.content.rendered'></div>
+    </div>
+  </ng-container>
+
 </div>
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>

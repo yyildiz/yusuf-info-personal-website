@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { State } from './../../../store/state';
 import { initialState } from '../../../consts/file.state';
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 import { File } from 'src/app/interfaces/file.interface';
 
 @Component({

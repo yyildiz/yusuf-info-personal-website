@@ -4,7 +4,7 @@ export const initialState = [
     iconSrc: 'assets/folder_type_e2e.svg',
     text: 'e2e',
     link: null,
-
+    default: false,
   },
   {
     matIcon: 'keyboard_arrow_right',

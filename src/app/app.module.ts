@@ -1,9 +1,13 @@
+import { LoaderService } from './services/loader.service';
+import { ContactService } from './services/contact.service';
 import { State } from './store/state';
 
 import { HttpClientModule } from '@angular/common/http';
 import { WpApiService } from './services/wp-api.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgTerminalModule } from 'ng-terminal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +22,8 @@ import { SidebarItemComponent } from './components/layout/sidebar/sidebar-item/s
 import { LayoutComponent } from './components/layout/layout/layout.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FileComponent } from './components/layout/files/file/file.component';
+import { TerminalComponent } from './components/terminal/terminal.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -31,15 +37,22 @@ import { FileComponent } from './components/layout/files/file/file.component';
     SidebarItemComponent,
     LayoutComponent,
     ContactComponent,
-    FileComponent
+    FileComponent,
+    TerminalComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgTerminalModule
   ],
-  providers: [WpApiService, State],
+  exports: [
+    LoaderComponent
+  ],
+  providers: [WpApiService, ContactService, State, LoaderService],
   bootstrap: [AppComponent]
 })
 

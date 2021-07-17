@@ -7,7 +7,7 @@
   border-right: 1px solid $background;
   background: darken($selection-active-bg, 8%);
   &.active .title {
-    color: $menu-fg;
+    color: $badge;
   }
   &:focus {
     outline: none;
@@ -16,7 +16,7 @@
     font-family: "Roboto";
     padding: 10px 30px;
     position: relative;
-    color: $active-bg;
+    color: $constant;
     cursor: pointer;
     display: flex;
     align-items: center;
