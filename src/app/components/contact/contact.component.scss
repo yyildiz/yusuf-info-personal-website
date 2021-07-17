@@ -1,0 +1,54 @@
+@import 'src/styles/colors';
+.container {
+  padding: 50px;
+  height: calc(90vh - 250px);
+  overflow: scroll;
+  input {
+    width: 250px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    display: block;
+  }
+  textarea {
+    width: 750px;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    display: block;
+    margin-top: 5px;
+  }
+  button {
+    background-color: $badge;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $sidebar-title;
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    input, textarea, button {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 25px;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+}

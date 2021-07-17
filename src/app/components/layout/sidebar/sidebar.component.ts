@@ -1,5 +1,8 @@
+import { State } from './../../../store/state';
+import { Observable } from 'rxjs';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { initialState } from '../../../consts/file.state';
+import { File } from 'src/app/interfaces/file.interface';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,10 +11,11 @@ import { initialState } from '../../../consts/file.state';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SidebarComponent implements OnInit {
-  files = initialState;
-  constructor() { }
+  constructor(private state: State) { }
+  files$: Observable<File[]>;
 
   ngOnInit(): void {
+    this.files$ = this.state.getFiles();
   }
 
 }

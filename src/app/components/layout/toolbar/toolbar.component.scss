@@ -42,6 +42,9 @@
         }
       }
     }
+    &.left {
+      overflow: hidden;
+    }
   }
   .item {
     height: 30px;
@@ -57,5 +60,21 @@
     height: 16px;
     margin-left: 5px;
     margin-right: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 1340px) {
+  .toolbar .center.container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  .toolbar .left.container {
+    flex: 2;
+  }
+  .toolbar .right.container {
+    flex: 1;
   }
 }

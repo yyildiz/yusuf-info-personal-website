@@ -13,10 +13,9 @@ export interface AppState {
 export class State {
   private initialState = {
     posts: [],
-    files: initialState
+    files: initialState,
   };
   private state: AppState = this.initialState;
-
 
   getPosts = () => {
     return of(this.state.posts);

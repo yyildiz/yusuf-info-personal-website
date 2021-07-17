@@ -13,6 +13,7 @@ export class SidebarItemComponent implements OnInit {
   @Input() text;
   @Input() children;
   @Input() link;
+  @Input() default;
   constructor() { }
 
   ngOnInit(): void {
