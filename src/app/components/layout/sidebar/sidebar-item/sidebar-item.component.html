@@ -1,6 +1,20 @@
-<div [routerLink]="link" [ngClass]="default ? 'interactable': null" routerLinkActive="active"><span class="material-icons">{{matIcon}}</span><span><img [src]="iconSrc" alt=""></span><span>{{text}}</span></div>
+<div
+  [routerLink]="link"
+  [ngClass]="default ? 'interactable' : null"
+  routerLinkActive="active"
+>
+  <span class="material-icons">{{ matIcon }}</span
+  ><span><img [src]="iconSrc" alt="" /></span><span>{{ text }}</span>
+</div>
 <ul *ngIf="children && children.length > 0">
   <li *ngFor="let child of children">
-    <app-sidebar-item [link]="child.link" [default]="child.default" [matIcon]="child.matIcon" [iconSrc]="child.iconSrc" [text]="child.text" [children]="child.children"></app-sidebar-item>
+    <app-sidebar-item
+      [link]="child.link"
+      [default]="child.default"
+      [matIcon]="child.matIcon"
+      [iconSrc]="child.iconSrc"
+      [text]="child.text"
+      [children]="child.children"
+    ></app-sidebar-item>
   </li>
 </ul>

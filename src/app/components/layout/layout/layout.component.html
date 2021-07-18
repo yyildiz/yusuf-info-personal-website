@@ -1,6 +1,12 @@
+<div id="background">
+  <app-icon [src]="'assets/my-computer.png'" [link]="'home'">Home</app-icon>
+  <app-icon [src]="'assets/notepad.png'" [link]="'blog'">Blog</app-icon>
+  <app-icon [src]="'assets/file-explorer.png'" [link]="'contact'">Contact Me</app-icon>
+  <app-icon [src]="'assets/recycle.png'">Recycle Bin</app-icon>
+</div>
 <div class="code">
   <app-toolbar></app-toolbar>
-  <div [ngClass]="isMinimized ? 'min': 'max'" class="container">
+  <div [ngClass]="isMinimized ? 'min' : 'max'" class="container">
     <app-sidebar></app-sidebar>
     <app-files>
       <router-outlet></router-outlet>

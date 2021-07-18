@@ -24,6 +24,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FileComponent } from './components/layout/files/file/file.component';
 import { TerminalComponent } from './components/terminal/terminal.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { IconComponent } from './components/layout/icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     ToolbarComponent,
     SidebarComponent,
     FilesComponent,
+    IconComponent,
     SidebarItemComponent,
     LayoutComponent,
     ContactComponent,

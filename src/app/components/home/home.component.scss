@@ -1,3 +1,4 @@
+@import 'src/styles/colors';
 .container {
   display: flex;
 }
@@ -12,6 +13,7 @@ ul {
   overflow-y: scroll;
   padding: 20px 50px 50px;
   box-sizing: border-box;
+  background: $background;
   &.full {
     height: calc(90vh)
   }

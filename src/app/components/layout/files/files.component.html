@@ -1,6 +1,13 @@
 <div class="files">
-  <span *ngFor="let file of (files$ | async)">
-    <app-file [link]="file.link" [iconSrc]="file.iconSrc" [matIcon]="file.matIcon" [text]="file.text" [children]="file?.children" [default]="file.default"></app-file>
+  <span *ngFor="let file of files$ | async">
+    <app-file
+      [link]="file.link"
+      [iconSrc]="file.iconSrc"
+      [matIcon]="file.matIcon"
+      [text]="file.text"
+      [children]="file?.children"
+      [default]="file.default"
+    ></app-file>
   </span>
 </div>
 <ng-content></ng-content>

@@ -13,7 +13,6 @@ export class LayoutComponent {
   }
 
   minMax(isMin) {
-    console.log(isMin);
     this.isMinimized = isMin;
   }
 
