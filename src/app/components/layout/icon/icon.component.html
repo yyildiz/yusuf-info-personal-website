@@ -1,4 +1,4 @@
-<div class="icon-container" (click)="selection()" [routerLink]="link">
+<div class="icon-container" [ngClass]="selected ? 'selected' : null" [routerLink]="link">
   <img class="icon" [src]=src>
   <p class="text"><ng-content></ng-content></p>
 </div>

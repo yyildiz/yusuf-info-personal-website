@@ -8,17 +8,22 @@
   }
   .icon-container {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .text {
     font-family: "Times New Roman", Times, serif;
     text-align: center;
     overflow-wrap: normal;
     max-width: 50px;
+    padding: 1px 3px;
     margin-top: 3px;
     font-size: 0.95em;
     text-shadow: 1px 1px 3px black;
   }
-  &.selected {
+  & .selected {
     .text {
       background: $selected-icon;
     }
