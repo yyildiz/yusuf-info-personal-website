@@ -1,5 +1,8 @@
-import { Input } from '@angular/core';
+import { EventEmitter, Input, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { File } from 'src/app/interfaces/file.interface';
+import { State } from 'src/app/store/state';
 
 @Component({
   selector: 'app-icon',
@@ -9,13 +12,9 @@ import { Component, OnInit } from '@angular/core';
 export class IconComponent implements OnInit {
   @Input() src: string;
   @Input() link: string;
+  @Input() selected: boolean = false;
   constructor() { }
-
   ngOnInit() {
-  }
-
-  selection() {
-    alert('hello, world!');
   }
 
 }
