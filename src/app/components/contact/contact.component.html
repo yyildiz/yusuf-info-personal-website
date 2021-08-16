@@ -1,18 +1,22 @@
-<div class="container">
-  <h2 class="text-center mb-5">Contact Me</h2>
+<div class="email-client">
+  <div class="head">
+    <div class="left container">
+      <span>Compose New Email - Yusuf's Email Client</span>
+    </div>
+    <div class="right container">
+      <span class="material-icons">close</span>
+    </div>
+  </div>
   <div class="row">
     <form [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
       <div class="form-group">
-        <label for="your-email">Email</label>
         <input type="email" class="form-control" name="your-email" aria-describedby="emailHelp"
-          placeholder="Enter email" formControlName="your-email">
+          placeholder="Your Email" formControlName="your-email">
       </div>
       <div class="form-group">
-        <label for="your-name">Name</label>
-        <input type="text" class="form-control" name="your-name" placeholder="Name" formControlName="your-name">
+        <input type="text" class="form-control" name="your-subject" placeholder="Subject" formControlName="your-subject">
       </div>
       <div class="form-group">
-        <label for="your-message">Message</label>
         <textarea class="form-control" formControlName="your-message" name="your-message"></textarea>
       </div>
       <button type="submit" class="btn btn-primary" [disabled]="!formData.valid">Submit</button>

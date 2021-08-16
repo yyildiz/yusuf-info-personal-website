@@ -1,40 +1,168 @@
 @import 'src/styles/colors';
-.blog-posts {
-  font-family: "Roboto Mono", monospace;
+.notepad {
+  width: calc(50vw);
+  max-width: 600px;
+  height: 400px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  box-shadow: 5px 5px 20px #444;
+  z-index: 3;
+  position: absolute;
+  left: 150px;
+  top: 50px;
+  color: $background;
+}
+
+@media screen and (max-width: 1020px) {
+  .notepad {
+    width: 70vw;
+  }
+  ::ng-deep {
+    .bottom-toolbar {
+      div:nth-child(4) {
+        flex: 1 !important;
+        min-width: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .notepad {
+    top: 90px;
+    left: 10px;
+    height: calc(100% - 120px);
+    width: calc(100% - 20px);
+    ::ng-deep {
+      .bottom-toolbar {
+        div:nth-child(1) {
+          flex: 1 !important;
+        }
+        div:nth-child(4) {
+          flex: 1 !important;
+          min-width: 100px;
+        }
+      }
+    }
+  }
+}
+
+.head {
+  height: 32px;
+  width: 100%;
+  background: white;
+  display: flex;
+  padding-left: 8px;
   box-sizing: border-box;
-  height: calc(100vh - 300px);
-  overflow: scroll;
-  padding: 50px 65px;
-  background: $background;
-  .post {
-    & > span {
-      font-size: 2.5em;
-      font-weight: bold;
-      width: 100%;
-      display: inline-block;
-      text-align: center;
+  align-items: center;
+  cursor: default;
+  user-select: none;
+  .container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    &.center {
+      justify-content: center;;
     }
-    ::-webkit-scrollbar {
-      display: none;
+    &.right {
+      display: flex;
+      justify-content: flex-end;
+      height: 100%;
+      .material-icons {
+        font-size: 17px;
+        height: 100%;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:nth-child(1) {
+          padding-bottom: 7px;
+          box-sizing: border-box;
+        }
+        &:nth-child(2) {
+          font-size: 13px;
+        }
+
+        &:hover {
+          background: #E5E5E5;
+          &:nth-child(3) {
+            background: red;
+            color: white;
+          }
+        }
+      }
+    }
+    &.left {
+      overflow: hidden;
+    }
+  }
+  img {
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+  }
+}
+.toolbar {
+  height: 22px;
+  width: 100%;
+  border-bottom: 1px solid #F0F0F0;
+  background: white;
+  span {
+    font-size: 11px;
+    box-sizing: border-box;
+    padding: 5px 8px;
+    height: 100%;
+    user-select: none;
+    display: inline-block;
+    &:hover {
+      background: #E5F3FF;
+      cursor: default;
+
     }
   }
 }
-
-
-@media only screen and (max-width: 715px) {
-  .blog-posts {
-    height: calc(100vh - 50px);
-    overflow: scroll;
-    overflow-x: hidden;
-    padding: 0 25px;
-    font-size: .8em;
-    width: 100vw;
-    margin: 0;
+.textarea {
+  border: none;
+  resize: none;
+  width: 100%;
+  height: calc(100% - 76px);
+  overflow-x: scroll;
+  overflow-y: scroll;
+  font-size: 18px;
+  box-sizing: border-box;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 50px 25px 25px;
+  &:focus {
+    outline: none !important;
+  }
+  p {
+    margin: 5px;
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .blog-posts {
-    height: calc(100vh - 325px);
+.bottom-toolbar {
+  background: #F0F1F0;
+  height: 22px;
+  width: 100%;
+  margin-top: -2px;
+  border-top: 1px solid #D7D7D7;
+  display: flex;
+  div {
+    flex: 1;
+    border-left: 1px solid #D7D7D7;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    box-sizing: border-box;
+    user-select: none;
+    &:nth-child(1) {
+      flex: 2;
+    }
+    &:nth-child(3) {
+      flex: .4;
+    }
   }
 }

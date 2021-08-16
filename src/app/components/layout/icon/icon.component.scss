@@ -23,9 +23,9 @@
     font-size: 0.95em;
     text-shadow: 1px 1px 3px black;
   }
-  & .selected {
+  &.selected {
     .text {
-      background: $selected-icon;
+      background: rgba($selected-icon, .5);
     }
   }
 }

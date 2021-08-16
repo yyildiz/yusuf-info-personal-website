@@ -1,0 +1,20 @@
+<div class="modal" *ngIf="show">
+  <div class="head">
+    <div class="left container">
+      <span>{{title}}</span>
+    </div>
+    <div class="right container">
+      <span class="material-icons" (click)="close()">close</span>
+    </div>
+  </div>
+  <div class="body">
+    <img src="{{imgSrc}}" height="35px" />
+    <div class="error-text">
+      <div class="bold">{{bodyTitle}}</div>
+      <div>{{bodyContent}}</div>
+    </div>
+  </div>
+  <div class="bottom">
+    <button (click)="close()">OK</button>
+  </div>
+</div>

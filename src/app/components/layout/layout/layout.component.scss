@@ -7,30 +7,12 @@ app-terminal {
   overflow: hidden;
 }
 
-#background {
-  background-image: url('src/assets/windows-xp.jpeg');
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-}
-
-::ng-deep app-icon {
-  &:nth-of-type(1) {
-    top: 50px;
-  }
-  &:nth-of-type(2) {
-    top: 150px;
-  }
-  &:nth-of-type(3) {
-    top: 250px;
+:ng-deep app-files {
+  width: 100% !important;
+  .files {
+    width: 100%;
   }
 }
-
-
 .code {
   border-radius: 5px;
   box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
@@ -40,13 +22,24 @@ app-terminal {
   right: 25px;
   top: 50px;
   height: calc(100% - 50px);
+  max-height: 800px;
   width: calc(100% - 175px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 500px) {
+  .code {
+    left: 10px;
+    right: 10px;
+    top: 90px;
+    height: calc(100% - 120px);
+    width: calc(100% - 20px);
+  }
+}
+
+@media only screen and (max-width: 894px) {
   app-sidebar {
     display: none;
   }
@@ -68,13 +61,5 @@ app-terminal {
   }
   app-files app-home .content {
     height: calc(90vh - 50px);
-  }
-  .blog-posts {
-    height: calc(90vh - 50px);
-  }
-  app-contact {
-    .container {
-      height: calc(90vh - 50px);
-    }
   }
 }

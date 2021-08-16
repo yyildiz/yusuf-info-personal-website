@@ -1,9 +1,6 @@
-import { LoaderService } from './../../services/loader.service';
-import { State } from './../../store/state';
-import { Observable } from 'rxjs';
-import { Post } from './../../interfaces/post.interface';
-import { WpApiService } from './../../services/wp-api.service';
-import { Component } from '@angular/core';
+import { ModalService } from 'src/app/services/modal.service';
+import { Component, HostListener } from '@angular/core';
+import { ModalsEnum } from 'src/app/consts/modals.enum';
 
 @Component({
   selector: 'app-blog',
@@ -11,8 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent {
-  posts$: Observable<Post[]>;
-  constructor(private wpApiService: WpApiService, private state: State, private loaderService: LoaderService) {
-     this.posts$ = this.wpApiService.getPosts();
+  shouldShow = false;
+  bodyContent = 'Use the three desktop icons on the left to interact with my website!';
+  constructor(private modalService: ModalService) {
+    this.shouldShow = this.modalService.shouldShowOnlyOnce(ModalsEnum.HomeIntro);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    const innerWidth = window.innerWidth;
+    if (innerWidth <= 501) {
+      this.bodyContent = 'Use the three desktop icons at the top to interact with my website!';
+    } else {
+      this.bodyContent = 'Use the three desktop icons on the left to interact with my website!';
+    }
   }
 }

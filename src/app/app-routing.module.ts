@@ -1,15 +1,15 @@
 import { ContactComponent } from './components/contact/contact.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LayoutComponent } from './components/layout/layout/layout.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'blog', component: BlogComponent },
+  { path: '', redirectTo: '/about-me', pathMatch: 'full' },
+  { path: 'connect', component: LayoutComponent },
+  { path: 'about-me', component: BlogComponent },
   { path: 'contact', component: ContactComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' },

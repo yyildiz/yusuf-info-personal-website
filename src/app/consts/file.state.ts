@@ -19,87 +19,29 @@ export const initialState = [
       {
         matIcon: 'keyboard_arrow_down',
         iconSrc: 'assets/file_type_ng_module_ts.svg',
-        text: 'home',
+        text: 'connect',
         children: [
           {
             matIcon: '',
             iconSrc: 'assets/file_type_typescript.svg',
-            text: 'home.component.ts',
+            text: 'connect.component.ts',
           },
           {
             matIcon: '',
             iconSrc: 'assets/file_type_html.svg',
-            text: 'home.component.html',
-            link: 'home',
+            text: 'connect.component.html',
+            link: '/connect',
             default: true,
           },
           {
             matIcon: '',
             iconSrc: 'assets/file_type_scss.svg',
-            text: 'home.component.scss',
+            text: 'connect.component.scss',
           },
           {
             matIcon: '',
             iconSrc: 'assets/file_type_typescriptdef.svg',
-            text: 'home.component.spec.ts',
-          }
-        ]
-      },
-      {
-        matIcon: 'keyboard_arrow_down',
-        iconSrc: 'assets/file_type_ng_module_ts.svg',
-        text: 'blog',
-        children: [
-          {
-            matIcon: '',
-            iconSrc: 'assets/file_type_typescript.svg',
-            text: 'blog.component.ts',
-          },
-          {
-            matIcon: '',
-            iconSrc: 'assets/file_type_html.svg',
-            text: 'blog.component.html',
-            link: 'blog',
-            default: true,
-          },
-          {
-            matIcon: '',
-            iconSrc: 'assets/file_type_scss.svg',
-            text: 'blog.component.scss',
-          },
-          {
-            matIcon: '',
-            iconSrc: 'assets/file_type_typescriptdef.svg',
-            text: 'blog.component.spec.ts',
-          }
-        ]
-      },
-      {
-        matIcon: 'keyboard_arrow_down',
-        iconSrc: 'assets/file_type_ng_module_ts.svg',
-        text: 'contact',
-        children: [
-          {
-            matIcon: '',
-            iconSrc: 'assets/file_type_typescript.svg',
-            text: 'contact.component.ts',
-          },
-          {
-            matIcon: '',
-            iconSrc: 'assets/file_type_html.svg',
-            text: 'contact.component.html',
-            link: 'contact',
-            default: true,
-          },
-          {
-            matIcon: '',
-            iconSrc: 'assets/file_type_scss.svg',
-            text: 'contact.component.scss',
-          },
-          {
-            matIcon: '',
-            iconSrc: 'assets/file_type_typescriptdef.svg',
-            text: 'contact.component.spec.ts',
+            text: 'connect.component.spec.ts',
           }
         ]
       },

@@ -1,7 +1,10 @@
 @import 'src/styles/sizes';
 @import 'src/styles/colors';
+:host {
+  width: 100%;
+}
 .files {
-  width: calc(100vw - #{$sidebar-width});
+  width: 100%;
   background: $menu-bg;
   height: 35px;
 }

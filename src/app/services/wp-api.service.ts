@@ -7,26 +7,28 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Post } from '../interfaces/post.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WpApiService {
   private posts$: Observable<Post[]>;
-  constructor(private http: HttpClient, private state: State) {
-  }
+  constructor(private http: HttpClient, private state: State) {}
 
   auth(username: string, password: string) {
-    const params =  new HttpParams({
+    const params = new HttpParams({
       fromObject: {
         username,
-        password
-      }
+        password,
+      },
     });
     return this.http.post(jwtUrl, { params });
   }
 
   getPosts() {
     if (!this.posts$) {
-      this.posts$ = this.call().pipe(shareReplay(1), mergeMap((posts) => this.state.updatePosts(posts)));
+      this.posts$ = this.call().pipe(
+        shareReplay(1),
+        mergeMap((posts) => this.state.updatePosts(posts))
+      );
     }
     return this.posts$;
   }

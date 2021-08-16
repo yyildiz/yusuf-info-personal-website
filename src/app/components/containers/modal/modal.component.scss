@@ -1,5 +1,6 @@
 @import 'src/styles/colors';
-.not-found {
+.modal {
+  user-select: none;
   width: 400px;
   height: 150px;
   font-family: 'Roboto', sans-serif;
@@ -13,7 +14,7 @@
   left: calc(50vw - 200px);
   top: 150px;
   z-index: 5;
-  color: $background;
+  color: black;
   .head {
       height: 32px;
       width: 100%;
@@ -68,6 +69,7 @@
       }
     }
     img {
+      height: 75px;
       filter: brightness(135%);
     }
   }
@@ -84,5 +86,8 @@
       width: 70px;
       border-radius: 0;
     }
+  }
+  .bold {
+    font-weight: bold;
   }
 }

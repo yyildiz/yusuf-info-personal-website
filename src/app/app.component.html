@@ -1,1 +1,24 @@
-<app-layout></app-layout>
+<div id="background">
+  <app-icon
+    [src]="'assets/file_type_vscode.svg'"
+    [routerLink]="'connect'"
+    routerLinkActive="selected"
+    [routerLinkActiveOptions]="{ exact: true, isActive: true }"
+    >Connect</app-icon
+  >
+  <app-icon
+    [src]="'assets/notepad.png'"
+    [routerLink]="'about-me'"
+    routerLinkActive="selected"
+    [routerLinkActiveOptions]="{ exact: true, isActive: true }"
+    >About</app-icon
+  >
+  <app-icon
+    [src]="'assets/email.png'"
+    [routerLink]="'contact'"
+    routerLinkActive="selected"
+    [routerLinkActiveOptions]="{ exact: true, isActive: true }"
+    >Contact</app-icon
+  >
+</div>
+<router-outlet></router-outlet>

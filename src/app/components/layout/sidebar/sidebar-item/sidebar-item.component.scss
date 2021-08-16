@@ -17,6 +17,7 @@ div {
   display: flex;
   position: relative;
   &.interactable {
+    cursor: pointer !important;
     color: $badge;
   }
   &.interactable.active {

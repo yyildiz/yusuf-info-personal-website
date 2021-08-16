@@ -12,6 +12,7 @@
 
 .interactable {
   color: $badge;
+  cursor: pointer;
 }
 .terminal-container {
   border-top: 1px solid rgba(white, 0.2);
@@ -68,7 +69,6 @@
       justify-content: center;
       list-style-type: none;
       padding: 5px 10px;
-      cursor: pointer;
 
       &.version-selector {
         background: $selection-bg;

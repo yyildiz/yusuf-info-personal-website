@@ -1,15 +1,10 @@
-<div id="background">
-  <app-icon [src]="'assets/my-computer.png'" (click)="toggleSelect('home')" [selected]='isSelected("home")' [link]="'home'">Home</app-icon>
-  <app-icon [src]="'assets/notepad.png'" (click)="toggleSelect('blog')" [selected]='isSelected("blog")' [link]="'blog'">Blog</app-icon>
-  <app-icon [src]="'assets/file-explorer.png'" (click)="toggleSelect('contact')" [selected]='isSelected("contact")' [link]="'contact'">Contact Me</app-icon>
-</div>
 <div class="code">
   <app-toolbar></app-toolbar>
   <div [ngClass]="isMinimized ? 'min' : 'max'" class="container">
     <app-sidebar></app-sidebar>
     <app-files>
-      <router-outlet></router-outlet>
+      <app-home></app-home>
     </app-files>
-    <app-terminal (minEvent)="minMax($event)"></app-terminal>
+    <app-terminal ngClass="interactable" (minEvent)="minMax($event)"></app-terminal>
   </div>
 </div>

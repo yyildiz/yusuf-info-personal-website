@@ -1,4 +1,5 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ElementRef } from '@angular/core';
+import { ElementService } from 'src/app/services/element.service';
 
 @Component({
   selector: 'app-layout',
@@ -8,24 +9,12 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 })
 export class LayoutComponent {
   isMinimized = false;
-  selected: string[] = [];
-  constructor() {
+  constructor(private elementService: ElementService, private el: ElementRef) {
+    this.elementService.getInteractable(this.el);
   }
 
   minMax(isMin) {
     this.isMinimized = isMin;
-  }
-
-  isSelected(item: string) {
-    return this.selected.includes(item);
-  }
-
-  toggleSelect(item: string) {
-    if (this.selected.includes(item)) {
-      this.selected = this.selected.filter(i => i !== item);
-    } else {
-      this.selected = [item];
-    }
   }
 
 }

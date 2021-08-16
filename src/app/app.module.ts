@@ -25,7 +25,9 @@ import { FileComponent } from './components/layout/files/file/file.component';
 import { TerminalComponent } from './components/terminal/terminal.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { IconComponent } from './components/layout/icon/icon.component';
-import { NotepadToolbarComponent } from './components/layout/notepad-toolbar/notepad-toolbar.component';
+import { ModalService } from './services/modal.service';
+import { ModalComponent } from './components/containers/modal/modal.component';
+import { ElementService } from './services/element.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,7 @@ import { NotepadToolbarComponent } from './components/layout/notepad-toolbar/not
     FileComponent,
     TerminalComponent,
     LoaderComponent,
-    NotepadToolbarComponent
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,7 @@ import { NotepadToolbarComponent } from './components/layout/notepad-toolbar/not
   exports: [
     LoaderComponent
   ],
-  providers: [WpApiService, ContactService, State, LoaderService],
+  providers: [WpApiService, ContactService, State, LoaderService, ModalService, ElementService],
   bootstrap: [AppComponent]
 })
 
